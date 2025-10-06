@@ -38,4 +38,58 @@ The README will document the project, its structure, and how it aligns with the 
 
 ## README.md
 
+## 4. Design-to-Code Implementation Notes
+
+The current code implements the functional requirements while adopting key design principles from the provided UI documents.
+
+### MenuItemsScreen (Home Screen)
+* **Initial State:** Contains placeholder menu items for demonstration.
+* [cite_start]**Updates:** Receives new items from `AddScreen` via **navigation parameters**[cite: 145].
+* [cite_start]**Summary:** The code structure is ready to implement the "Total Items" and "Avg Price" summary cards as seen in the design[cite: 19].
+* **Item Structure:** Currently shows Title, Description, and Price. [cite_start]The design's **Expandable Card** (`[+]` icon) and **Delete Icon** features are not yet implemented but can be added using `TouchableOpacity`[cite: 21, 22].
+
+### AddScreen
+* [cite_start]**Input Fields:** Implements **Title (Dish Name)**, **Description**, **Category (Course Type)**, and **Price** using `TextInput`[cite: 50, 51, 52, 54].
+* **Course Selection:** The current `AddScreen` uses a `TextInput` for **Category**. [cite_start]This should be updated to a **Dropdown/Picker** component to enforce the "preset course list" and "constrained input" design element[cite: 76, 88, 152].
+* [cite_start]**Live Preview:** The design includes a **Live Preview**[cite: 77]. This feature is not implemented in the current code but can be added using state variables to render a preview component.
+
+### FilterScreen
+* [cite_start]**Controls:** Implements a **Category Picker** and an **Availability Switch** based on the overall design goal to access filtering options[cite: 20, 108].
+* [cite_start]**Functionality:** The `handleApplyFilters` function is a placeholder that currently only navigates back, but is structured to pass filter values to the `MenuItemsScreen`[cite: 125, 147].
+
+---
+
+## CHANGELOG.md
+
+```markdown
+# Changelog
+
+## Version 1.0.0 (Initial Code Drop) - Based on UI Requirements (Part 1) and Initial Code Structure
+
+### 🔄 Refactoring & Renaming
+* **RENAMED:** `Homescreen.tsx` to **`MenuItemsScreen.tsx`** for improved clarity regarding the screen's purpose.
+* **UPDATED:** `types.ts` to include navigation parameter definitions (`RootTabParamList`) to support passing data between screens.
+
+### ✨ New Features
+* **[Menu Tab]:** Implemented the **`MenuItemsScreen`** which displays a static list of initial menu items. [cite_start]It also includes `useEffect` logic to dynamically add new items received via navigation parameters[cite: 145].
+* **[Add Tab]:** Updated **`AddScreen`** to:
+    * Include a `category` state and `TextInput` to fulfill the `MenuItem` interface requirements.
+    * [cite_start]Implement **data passing** via `navigation.navigate('Menu', { newItem })` to ensure the newly added item is displayed immediately on the Menu screen[cite: 145].
+* [cite_start]**[Filter Tab]:** Introduced **`FilterScreen.tsx`**, a new component designed according to the UI specification[cite: 93].
+    * Includes a **Category Picker** and **Availability Switch** for selection.
+    * Includes `minPrice` and `maxPrice` inputs for price range filtering.
+    * [cite_start]The `handleApplyFilters` function is a placeholder for sending filter logic to the `MenuItemsScreen`[cite: 147].
+
+### 🛠️ Improvements & Fixes
+* [cite_start]**Navigation:** Updated `App.tsx` to use `createBottomTabNavigator` with three screens: `Menu`, `Add`, and `Filter`[cite: 142].
+* **Typing:** Enhanced type safety across all components using custom navigation props defined in `types.ts`.
+
+
+
+
+
+
+
+
+
 
