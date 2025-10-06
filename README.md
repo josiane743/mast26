@@ -113,7 +113,8 @@ The project uses a component-based structure, separating concerns into dedicated
 * **Typing:** Enhanced type safety across all components using custom navigation props defined in `types.ts`.
 
 ##Screenshot##
-**
+** <img width="1869" height="521" alt="Screenshot 2025-10-06 190146" src="https://github.com/user-attachments/assets/e8457d39-ccb7-4f00-be38-e9eb659362d6" /> **
+
 
 
 
