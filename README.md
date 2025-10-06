@@ -44,20 +44,48 @@ The current code implements the functional requirements while adopting key desig
 
 ### MenuItemsScreen (Home Screen)
 * **Initial State:** Contains placeholder menu items for demonstration.
-* [cite_start]**Updates:** Receives new items from `AddScreen` via **navigation parameters**[cite: 145].
-* [cite_start]**Summary:** The code structure is ready to implement the "Total Items" and "Avg Price" summary cards as seen in the design[cite: 19].
-* **Item Structure:** Currently shows Title, Description, and Price. [cite_start]The design's **Expandable Card** (`[+]` icon) and **Delete Icon** features are not yet implemented but can be added using `TouchableOpacity`[cite: 21, 22].
+* **Updates:** Receives new items from `AddScreen` via **navigation parameters**.
+* **Summary:** The code structure is ready to implement the "Total Items" and "Avg Price" summary cards as seen in the design.
+* **Item Structure:** Currently shows Title, Description, and Price. The design's **Expandable Card** (`[+]` icon) and **Delete Icon** features are not yet implemented but can be added using `TouchableOpacity`.
 
 ### AddScreen
-* [cite_start]**Input Fields:** Implements **Title (Dish Name)**, **Description**, **Category (Course Type)**, and **Price** using `TextInput`[cite: 50, 51, 52, 54].
-* **Course Selection:** The current `AddScreen` uses a `TextInput` for **Category**. [cite_start]This should be updated to a **Dropdown/Picker** component to enforce the "preset course list" and "constrained input" design element[cite: 76, 88, 152].
-* [cite_start]**Live Preview:** The design includes a **Live Preview**[cite: 77]. This feature is not implemented in the current code but can be added using state variables to render a preview component.
+* **Input Fields:** Implements **Title (Dish Name)**, **Description**, **Category (Course Type)**, and **Price** using `TextInput`.
+* **Course Selection:** The current `AddScreen` uses a `TextInput` for **Category**. This should be updated to a **Dropdown/Picker** component to enforce the "preset course list" and "constrained input" design element.
+* **Live Preview:** The design includes a **Live Preview**. This feature is not implemented in the current code but can be added using state variables to render a preview component.
 
 ### FilterScreen
-* [cite_start]**Controls:** Implements a **Category Picker** and an **Availability Switch** based on the overall design goal to access filtering options[cite: 20, 108].
-* [cite_start]**Functionality:** The `handleApplyFilters` function is a placeholder that currently only navigates back, but is structured to pass filter values to the `MenuItemsScreen`[cite: 125, 147].
+* **Controls:** Implements a **Category Picker** and an **Availability Switch** based on the overall design goal to access filtering options.
+* **Functionality:** The `handleApplyFilters` function is a placeholder that currently only navigates back, but is structured to pass filter values to the `MenuItemsScreen`.
 
 ---
+
+# Christoffel's Menu App
+
+This is a cross-platform mobile application designed for Christoffel, a private chef, to efficiently manage and present a dynamic menu. It is built using **React Native** and **TypeScript**.
+
+The application is structured around a tab navigation system allowing easy access to the core features: viewing the **Menu**, **Adding New Items**, and **Filtering** the menu list.
+
+## 1. Features
+
+The current implementation covers the core requirements for menu management and viewing, as outlined in the project specifications:
+
+| Feature | Description | Design Alignment |
+| :--- | :--- | :--- |
+| **Menu Viewing** | Displays a list of all current menu items with their title, description, and price. | Home Layout / Menu Items Screen. |
+| **Add New Item** | Provides a dedicated form for chefs to input **Dish Name**, **Description**, **Course Type**, and **Price**. | Add Menu Items Design Screen. |
+| **Filter** | Allows users to filter the menu list by **Category** and **Availability** (implementation is based on the design which suggests filtering by course/category). | Filter Screen Design. |
+| **Navigation** | Uses **Bottom Tab Navigation** for primary screens (Menu, Add, Filter). | Navigation Flow Diagram. |
+
+## 2. Technology Stack
+
+* **Framework:** React Native
+* **Language:** TypeScript
+* **Navigation:** `@react-navigation/native`, `@react-navigation/bottom-tabs`
+* **Components:** `View`, `Text`, `FlatList`, `TextInput`, `Button`, `Switch`, `Picker`
+
+## 3. Code Structure
+
+The project uses a component-based structure, separating concerns into dedicated files:
 
 ## CHANGELOG.md
 
@@ -71,17 +99,17 @@ The current code implements the functional requirements while adopting key desig
 * **UPDATED:** `types.ts` to include navigation parameter definitions (`RootTabParamList`) to support passing data between screens.
 
 ### ✨ New Features
-* **[Menu Tab]:** Implemented the **`MenuItemsScreen`** which displays a static list of initial menu items. [cite_start]It also includes `useEffect` logic to dynamically add new items received via navigation parameters[cite: 145].
+* **[Menu Tab]:** Implemented the **`MenuItemsScreen`** which displays a static list of initial menu items. It also includes `useEffect` logic to dynamically add new items received via navigation parameters.
 * **[Add Tab]:** Updated **`AddScreen`** to:
     * Include a `category` state and `TextInput` to fulfill the `MenuItem` interface requirements.
-    * [cite_start]Implement **data passing** via `navigation.navigate('Menu', { newItem })` to ensure the newly added item is displayed immediately on the Menu screen[cite: 145].
-* [cite_start]**[Filter Tab]:** Introduced **`FilterScreen.tsx`**, a new component designed according to the UI specification[cite: 93].
+    * Implement **data passing** via `navigation.navigate('Menu', { newItem })` to ensure the newly added item is displayed immediately on the Menu screen.
+* ** Introduced **`FilterScreen.tsx`**, a new component designed according to the UI specification.
     * Includes a **Category Picker** and **Availability Switch** for selection.
     * Includes `minPrice` and `maxPrice` inputs for price range filtering.
-    * [cite_start]The `handleApplyFilters` function is a placeholder for sending filter logic to the `MenuItemsScreen`[cite: 147].
+    * The `handleApplyFilters` function is a placeholder for sending filter logic to the `MenuItemsScreen`.
 
 ### 🛠️ Improvements & Fixes
-* [cite_start]**Navigation:** Updated `App.tsx` to use `createBottomTabNavigator` with three screens: `Menu`, `Add`, and `Filter`[cite: 142].
+* **Navigation:** Updated `App.tsx` to use `createBottomTabNavigator` with three screens: `Menu`, `Add`, and `Filter`.
 * **Typing:** Enhanced type safety across all components using custom navigation props defined in `types.ts`.
 
 
