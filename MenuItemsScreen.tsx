@@ -10,6 +10,11 @@ interface MenuItemsScreenProps {
 const initialMenuItems: MenuItem[] = [
   { id: '1', title: 'Classic Burger', description: 'Beef patty with lettuce and tomato', price: 12.50, category: 'Main', isAvailable: true },
   { id: '2', title: 'Caesar Salad', description: 'Romaine lettuce, croutons, parmesan cheese', price: 9.00, category: 'Appetizer', isAvailable: true },
+  { id: '3', title: 'Grilled Salmon', description: 'Fresh Atlantic salmon with seasonal vegetables', price: 18.00, category: 'Main', isAvailable: true },
+  { id: '4', title: 'Chocolate Souffle', description: 'Rich, airy chocolate dessert, made to order', price: 9.50, category: 'Dessert', isAvailable: true },
+  { id: '5', title: 'Beef Wellington', description: 'Fillet steak coated in pâté and duxelles, wrapped in puff pastry', price: 25.00, category: 'Main', isAvailable: false },
+  { id: '6', title: 'French Onion Soup', description: 'Caramelized onions in beef broth, topped with crouton and cheese', price: 7.50, category: 'Appetizer', isAvailable: true },
+  
 ];
 
 const MenuItemsScreen: React.FC<MenuItemsScreenProps> = ({ route }) => {
