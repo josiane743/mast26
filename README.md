@@ -25,3 +25,10 @@ The current implementation covers the core requirements for menu management and 
 ## 3. Code Structure
 
 The project uses a component-based structure, separating concerns into dedicated files:
+
+├── App.tsx             # Main component, sets up Tab Navigation (Menu, Add, Filter).
+├── MenuItemsScreen.tsx # Displays the list of menu items (renamed from Homescreen.tsx).
+├── AddScreen.tsx       # Form for adding new menu items.
+├── FilterScreen.tsx    # Screen for applying filters to the menu list.
+└── types.ts            # TypeScript interface definitions (MenuItem) and navigation parameter types.
+
