@@ -112,6 +112,9 @@ The project uses a component-based structure, separating concerns into dedicated
 * **Navigation:** Updated `App.tsx` to use `createBottomTabNavigator` with three screens: `Menu`, `Add`, and `Filter`.
 * **Typing:** Enhanced type safety across all components using custom navigation props defined in `types.ts`.
 
+##Screenshot##
+**
+
 
 
 
