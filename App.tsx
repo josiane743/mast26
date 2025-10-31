@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AddScreen from './AddScreen';
 import MenuItemsScreen from './MenuItemsScreen'; // Renamed from HomeScreen
 import FilterScreen from './FilterScreen'; // New Screen
+import { MenuItem } from './types';
 
 // Defining a type for the tab parameters to allow passing data, 
 // specifically for passing new items back to MenuItemsScreen.

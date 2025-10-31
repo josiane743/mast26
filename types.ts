@@ -11,15 +11,30 @@ export interface MenuItem {
   isAvailable: boolean;
 }
 
-// Defining a type for the tab parameters to allow passing data.
+// 1. Define the shape of the filters
+export interface Filters {
+  category?: string;
+  isAvailable?: boolean;
+  minPrice?: number;
+  maxPrice?: number;
+}
+
+// 2. Update RootTabParamList to accept *either* a new item or filters
 export type RootTabParamList = {
-  Menu: { newItem?: Omit<MenuItem, 'id'> } | undefined;
+  Menu: { 
+    newItem?: Omit<MenuItem, 'id'>;
+    filters?: Filters;
+  } | undefined;
   Add: undefined;
   Filter: undefined;
 };
 
-// Types for Navigation Props
+// 3. Define all navigation/route prop types for type-safety
 export type MenuScreenNavigationProp = StackNavigationProp<RootTabParamList, 'Menu'>;
-export type AddScreenNavigationProp = StackNavigationProp<RootTabParamList, 'Add'>;
-
 export type MenuScreenRouteProp = RouteProp<RootTabParamList, 'Menu'>;
+
+export type AddScreenNavigationProp = StackNavigationProp<RootTabParamList, 'Add'>;
+export type AddScreenRouteProp = RouteProp<RootTabParamList, 'Add'>;
+
+export type FilterScreenNavigationProp = StackNavigationProp<RootTabParamList, 'Filter'>;
+export type FilterScreenRouteProp = RouteProp<RootTabParamList, 'Filter'>;
