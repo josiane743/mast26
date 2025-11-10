@@ -64,6 +64,18 @@ The current code implements the functional requirements while adopting key desig
 * **Controls:** Implements a **Category Picker** and an **Availability Switch** based on the overall design goal to access filtering options.
 * **Functionality:** The `handleApplyFilters` function is a placeholder that currently only navigates back, but is structured to pass filter values to the `MenuItemsScreen`.
 
+* Feature
+
+## Details
+State
+* ** Manages states for selectedCategory, isAvailable, minPrice, and maxPrice.
+
+## Validation
+* ** Checks for valid positive numbers and ensures minPrice is not greater than maxPrice.
+
+## Navigation
+* ** Logs the applied filter object to the console and navigates back (or would pass filters to the Menu screen in a real application).
+
 ### Advanced Filtering (FilterScreen)
 
 * ** Category Filter: Allows selection from predefined categories (Main, Appetizer, Dessert, Drink).
