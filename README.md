@@ -117,6 +117,23 @@ The project uses a component-based structure, separating concerns into dedicated
 ** <img width="1912" height="682" alt="Screenshot 2025-10-06 190231" src="https://github.com/user-attachments/assets/0c609e45-d3a6-4276-b757-66e3d0e82c29" /> **
 *** Youtube link: https://youtu.be/Eg9hcG7jPKI ###
 
+## 📊 Real-Time Analytics
+** Menu statistics (total items, total value, average price)
+** Category-wise breakdown with average prices
+** Visual summary section with progress indicators
+
+## 🔧 Interactive Features
+** Quick view modal with detailed item information
+** Wishlist functionality with local storage
+** Order buttons for immediate action
+** Availability indicators with color coding
+
+## 🎯 Enhanced UX
+** Category filtering with chip selection
+** Animated item loading
+** Empty states with helpful messaging
+** Floating Action Button for adding items
+
 
 
 
