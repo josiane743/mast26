@@ -64,7 +64,7 @@ The current code implements the functional requirements while adopting key desig
 * **Controls:** Implements a **Category Picker** and an **Availability Switch** based on the overall design goal to access filtering options.
 * **Functionality:** The `handleApplyFilters` function is a placeholder that currently only navigates back, but is structured to pass filter values to the `MenuItemsScreen`.
 
-* Feature
+## Feature
 
 ## Details
 State
