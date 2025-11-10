@@ -47,6 +47,13 @@ The current code implements the functional requirements while adopting key desig
 * **Updates:** Receives new items from `AddScreen` via **navigation parameters**.
 * **Summary:** The code structure is ready to implement the "Total Items" and "Avg Price" summary cards as seen in the design.
 * **Item Structure:** Currently shows Title, Description, and Price. The design's **Expandable Card** (`[+]` icon) and **Delete Icon** features are not yet implemented but can be added using `TouchableOpacity`.
+  
+## Menu Display: Renders a scrollable list of food and drink items.
+** Real-time Metrics (Calculations): Utilizes useMemo to efficiently compute and display key statistics at the top of the menu:
+** Total Item Count on the menu.
+** Final Price Range (Lowest and Highest price item on the menu).
+** Average Price for each defined category (Main, Appetizer, Dessert, Drink).
+** Dynamic Addition: Supports adding new menu items via navigation parameters (e.g., from an implied AddScreen).
 
 ### AddScreen
 * **Input Fields:** Implements **Title (Dish Name)**, **Description**, **Category (Course Type)**, and **Price** using `TextInput`.
