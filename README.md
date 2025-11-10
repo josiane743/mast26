@@ -64,6 +64,13 @@ The current code implements the functional requirements while adopting key desig
 * **Controls:** Implements a **Category Picker** and an **Availability Switch** based on the overall design goal to access filtering options.
 * **Functionality:** The `handleApplyFilters` function is a placeholder that currently only navigates back, but is structured to pass filter values to the `MenuItemsScreen`.
 
+### Advanced Filtering (FilterScreen)
+
+* ** Category Filter: Allows selection from predefined categories (Main, Appetizer, Dessert, Drink).
+* ** Availability Toggle: A switch to filter and show only currently available items.
+* ** Price Range Input: Text inputs for specifying minimum and maximum price constraints, with validation checks to ensure numerical and logical input (min < max).
+* ** Visual Feedback: Displays the calculated price range immediately after applying filters.
+
 ---
 
 # Christoffel's Menu App
