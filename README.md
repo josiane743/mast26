@@ -10,10 +10,10 @@ The current implementation covers the core requirements for menu management and 
 
 | Feature | Description | Design Alignment |
 | :--- | :--- | :--- |
-| **Menu Viewing** | Displays a list of all current menu items with their title, description, and price. Home Layout / Menu Items Screen| home layout
-| **Add New Item** | Provides a dedicated form for chefs to input **Dish Name**, **Description**, **Course Type**, and **Price**. Add Menu Items Design Screen.| Add Menu Items 
-| **Filter** | Allows users to filter the menu list by **Category** and **Availability** (implementation is based on the design which suggests filtering by course/category). Filter Screen Design.|Filter Screen Design 
-| **Navigation** | Uses **Bottom Tab Navigation** for primary screens (Menu, Add, Filter).Navigation Flow Diagram.| Navigation Flow Diagram
+| **Menu Viewing** | Displays a list of all current menu items with their title, description, and price. | home layout
+| **Add New Item** | Provides a dedicated form for chefs to input **Dish Name**, **Description**, **Course Type**, and **Price**.| Add Menu Items 
+| **Filter** | Allows users to filter the menu list by **Category** and **Availability** (implementation is based on the design which suggests filtering by course/category). |Filter Screen Design 
+| **Navigation** | Uses **Bottom Tab Navigation** for primary screens (Menu, Add, Filter)| Navigation Flow Diagram
 
 ## 2. Technology Stack
 
